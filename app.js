@@ -29,3 +29,14 @@ document.getElementById('key-pad').addEventListener('click', function (e) {
         calcInput.value = newNumber;
     }
 });
+document.getElementById('submit-btn').addEventListener('click', function () {
+    const pin = document.getElementById('genarate-display').value;
+    const verifyPin = document.getElementById('pin-display').value;
+    if (pin == verifyPin) {
+        document.getElementById('notify-success').style.display = 'block';
+        document.getElementById('notify-fail').style.display = 'none';
+    } else {
+        document.getElementById('notify-fail').style.display = 'block';
+        document.getElementById('notify-success').style.display = 'none';
+    }
+});
